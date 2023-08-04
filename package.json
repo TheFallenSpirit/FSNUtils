@@ -1,19 +1,19 @@
 {
-  "name": "fsutils",
+  "name": "fsn-utils",
   "type": "module",
   "version": "0.1.0",
   "description": "A collection of utilities I use for building Discord bots using Discord.js.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheFallenSpirit/FSUtils.git"
+    "url": "git+https://github.com/TheFallenSpirit/FSNUtils.git"
   },
   "author": "Liam Labell <thefallenspirit@outlook.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/TheFallenSpirit/FSUtils/issues"
+    "url": "https://github.com/TheFallenSpirit/FSNUtils/issues"
   },
-  "homepage": "https://github.com/TheFallenSpirit/FSUtils#readme",
+  "homepage": "https://github.com/TheFallenSpirit/FSNUtils#readme",
   "dependencies": {
     "dayjs": "^1.11.9",
     "discord.js": "^14.12.1"
