@@ -88,3 +88,6 @@ export const shuffleRand = (string) => {
     }
     return chars.join('');
 };
+
+export { default as Embed } from './structures/Embed.js';
+export { default as Confirm } from './structures/Confirm.js';
