@@ -1,5 +1,5 @@
 import { ChatInputCommandInteraction, ButtonBuilder, ActionRowBuilder, ButtonStyle, ComponentType } from 'discord.js';
-import { genDbId } from '../index.js';
+import { genDbId10 } from '../index.js';
 
 /**
  * Constructs a comfirm modal and replies to the interaction with it.
@@ -18,7 +18,7 @@ export default class Confirm {
      * @param {string} [opts.cancel]
      * @param {string} [opts.confirm]
      */
-    constructor(interaction, message, opts) {
+    constructor (interaction, message, opts) {
         this.opts = opts;
         this.message = message;
         this.interaction = interaction;
@@ -29,9 +29,9 @@ export default class Confirm {
      * @returns {ButtonInteraction}
      * @throws {ButtonInteraction}
      */
-    async send() {
+    send = async () => {
         return await new Promise(async (resolve, reject) => {
-            const id = genDbId();
+            const id = genDbId10();
             const cancelBtn = new ButtonBuilder({ label: this.opts.cancel ? this.opts.cancel : 'Cancel', style: ButtonStyle.Secondary, customId: `btn.${id}.cancel` });
             const confirmBtn = new ButtonBuilder({ label: this.opts.confirm ? this.opts.confirm : 'Confirm', style: ButtonStyle.Danger, customId: `btn.${id}.confirm` });
             const row = new ActionRowBuilder({ components: [confirmBtn, cancelBtn] });

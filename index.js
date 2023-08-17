@@ -12,12 +12,6 @@ dayjs.extend(timezone);
 dayjs.extend(advancedFormat);
 
 /**
- * Generates a database-safe identification number.
- * @returns {number}
- */
-export const genDbId = () => randomInt(11111111, 99999999);
-
-/**
  * Resolves the current directories path from import.meta.url.
  * @param {string} path 
  * @returns {string}
@@ -60,6 +54,26 @@ export const truncateString = (string, length = 1000) => {
 export const getMember = (interaction, key) => {
     const user = interaction.options.getUser(key);
     return interaction.guild?.members.cache.get(user?.id);
+};
+
+/**
+ * Generates a 10 digit long database-safe identification number.
+ * @returns {number}
+ */
+export const genDbId10 = () => {
+    let int = 0;
+    int = randomInt(1111111111, 9999999999);
+    return int;
+};
+
+/**
+ * Generates a 12 digit long database-safe identification number.
+ * @returns {number}
+ */
+export const genDbId12 = () => {
+    let int = 0;
+    int = randomInt(111111111111, 999999999999);
+    return int;
 };
 
 /**

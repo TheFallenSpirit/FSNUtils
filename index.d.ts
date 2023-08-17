@@ -1,4 +1,4 @@
-import { ChatInputCommandInteraction, GuildMember, ButtonInteraction, EmbedBuilder } from "discord.js";
+import { ChatInputCommandInteraction, GuildMember, ButtonInteraction } from "discord.js";
 
 declare module 'fsutils';
 
@@ -38,7 +38,8 @@ interface EmbedData {
     color?: `#${string}`|number;
 }
 
-declare function genDbId(): number;
+declare function genDbId10(): number;
+declare function genDbId12(): number;
 declare function getDir(path: string): string;
 declare function shuffleRand(string: string): string;
 declare function capitalizeRand(string: string): string;
