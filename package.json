@@ -1,7 +1,7 @@
 {
   "name": "fsn-utils",
   "type": "module",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A collection of utilities I use for building Discord bots using Discord.js.",
   "main": "index.js",
   "repository": {

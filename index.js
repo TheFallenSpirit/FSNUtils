@@ -32,7 +32,7 @@ export const getMessage = (guild, channel, message) => `https://discord.com/${gu
  * @param {Date|null|string|number} date 
  * @returns {string}
  */
-export const formatDate = (date) => dayjs(date).format('dddd, MMMM Do, YYYY HH:mm (DD/MM/YY) (z)');
+export const formatDate = (date) => dayjs(date).utc().tz('Etc/UTC').format('dddd, MMMM Do, YYYY HH:mm (DD/MM/YY) (z)');
 
 /**
  * Truncates a string.
@@ -40,9 +40,9 @@ export const formatDate = (date) => dayjs(date).format('dddd, MMMM Do, YYYY HH:m
  * @param {number} length 
  * @returns {string}
  */
-export const truncateString = (string, length = 1000) => {
+export const truncateString = (string, length = 1024) => {
     if (string.length <= length) return string;
-    else return `${string.substring(0, Math.min(length, string.length))}...`;
+    else return `${string.substring(0, Math.min(length-3, string.length))}...`;
 };
 
 /**
